@@ -1,7 +1,4 @@
-//import Hero from "@/components/home/Hero";
-//import Logo from "@/components/home/logo";
-//import TrendingProducts from "@/components/home/product";
-
+import ClientLogos from "@/components/HomePage/ClientLogos";
 import Hero from "@/components/HomePage/Hero";
 import TrendingProducts from "@/components/HomePage/TrendingProducts";
 
@@ -9,12 +6,9 @@ import TrendingProducts from "@/components/HomePage/TrendingProducts";
 export default function Home() {
   return (
     <main>
-      <Hero />
-      <section>
+      <Hero />    
         <TrendingProducts />
-        {/* <Logo /> */}
-      </section>
-    
+        <ClientLogos />
     </main>
   );
 }
