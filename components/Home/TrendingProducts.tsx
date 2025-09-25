@@ -3,7 +3,7 @@ import React from "react";
 import { Heart } from "lucide-react";
 import Image from "next/image";
 
-const products = [
+const productsarr = [
     {
         id: 1,
         title: "Capped Composite Fencing Panel — Wide Finish",
@@ -41,7 +41,7 @@ export default function TrendingProducts() {
         <section className="py-12 bg-white">
             {/* Heading */}
             <div className="text-center mb-10">
-                <h2 className="text-6xl font-semibold text-[#1C1C1C]">Trending Products</h2>
+                <h2 className="text-6xl font-semibold text-[#1C1C1C]">Trending Products 123</h2>
                 <p className=" max-w-2xl mx-auto mt-5 text-xl text-[#5E5E5E] ">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
                     <span className="text-[#F06F38] font-bold cursor-pointer"> READ MORE</span>
@@ -50,7 +50,7 @@ export default function TrendingProducts() {
 
             {/* Product Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
-                {products.map((product) => (
+                {productsarr.map((product) => (
                     <div
                         key={product.id}
                         className="relative bg-white  overflow-hidden group"
