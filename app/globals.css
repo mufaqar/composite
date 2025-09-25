@@ -1,8 +1,6 @@
 @import "tailwindcss";
 
-<<<<<<< HEAD
 
-=======
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -23,16 +21,17 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 100%;
+}
+
+@media (min-width: 96rem) { /* 1536px */
+  .container {
+    max-width: 1280px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
->>>>>>> 3a43572cb71c922de4609873875ab704ca3d0856
