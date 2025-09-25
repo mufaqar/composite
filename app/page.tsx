@@ -1,26 +1,15 @@
-
-import Hero from "@/components/Home/Hero";
-
+import Hero from "@/components/home/Hero";
 import Logo from "@/components/home/logo";
 import TrendingProducts from "@/components/home/product";
 
-import Image from "next/image";
-
 export default function Home() {
   return (
-
     <main>
       <Hero />
- 
-
-   <section>
+      <section>
         <TrendingProducts />
         <Logo />
-        
-   </section>
-
-       </main>
-  
-
+      </section>
+    </main>
   );
 }
