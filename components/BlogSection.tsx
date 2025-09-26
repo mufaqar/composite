@@ -8,21 +8,21 @@ const blogs = [
     date: "13 Feb 2022",
     title: "Timeless product crafted beautifully with a sustainable materials",
     readTime: "3 minute read",
-    image: "/blog1.jpg", // replace with actual image path in public folder
+    image: "/images/blog1.png", // replace with actual image path in public folder
   },
   {
     id: 2,
     date: "12 Jan 2022",
     title: "Timeless product crafted beautifully with a sustainable materials",
     readTime: "8 minute read",
-    image: "/blog2.jpg",
+    image: "/images/blog2.png",
   },
   {
     id: 3,
     date: "11 Dec 2021",
     title: "Timeless product crafted beautifully with a sustainable materials",
     readTime: "4 minute read",
-    image: "/blog3.jpg",
+    image: "/images/blog3.png",
   },
 ]
 
@@ -31,12 +31,12 @@ const BlogsSection = () => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         {/* Heading */}
-        <h2 className="text-center text-3xl md:text-4xl font-bold text-black mb-12">
+        <h2 className="md:text-6xl text-[34px] leading-none font-semibold text-title text-center font-DM_Sans">
           Our Blogs
         </h2>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-[65px]">
           {blogs.map((blog) => (
             <div key={blog.id} className="bg-white shadow-sm">
               {/* Image */}
@@ -51,14 +51,14 @@ const BlogsSection = () => {
 
               {/* Content */}
               <div className="mt-4">
-                <p className="text-sm text-gray-500 flex items-center gap-2">
-                  <span className="text-red-500 text-lg">•</span>
+                <p className="text-sm text-description font-DM_Sans flex items-center gap-2">
+                  <span className="text-red-500 text-lg ">•</span>
                   {blog.date}
                 </p>
-                <h3 className="text-lg font-semibold mt-2 text-black">
+                <h3 className="text-[22px]  font-normal font-DM_Sans">
                   {blog.title}
                 </h3>
-                <p className="text-sm text-gray-500 mt-2">
+                <p className="text-sm text-description mt-2">
                   {blog.readTime}
                 </p>
               </div>
