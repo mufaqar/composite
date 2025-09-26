@@ -13,7 +13,7 @@ const testimonials = [
     text: "Excellent quality decking and fantastic customer service. Highly recommend!",
     name: "John D.",
     role: "CEO, Company",
-    image: "/user1.jpg", // place in public folder
+    image: "/images/testimonail.png", // place in public folder
     rating: 5,
   },
   {
@@ -21,7 +21,7 @@ const testimonials = [
     text: "The composite fencing looks amazing and was so easy to install. Very happy!",
     name: "Sarah M.",
     role: "Manager",
-    image: "/user2.jpg",
+    image: "/images/testimonail.png",
     rating: 4,
   },
   {
@@ -29,7 +29,7 @@ const testimonials = [
     text: "I’m impressed with the durability and look of the cladding. Great choice!",
     name: "Michael B.",
     role: "Homeowner",
-    image: "/user3.jpg",
+    image: "/images/testimonail.png",
     rating: 5,
   },
 ];
