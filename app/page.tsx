@@ -1,4 +1,7 @@
+import FaqsSection from "@/components/FaqSection";
 import ClientLogos from "@/components/HomePage/ClientLogos";
+
+
 import FeaturedIcons from "@/components/HomePage/FeaturedIcons";
 import Hero from "@/components/HomePage/Hero";
 import ProductRange from "@/components/HomePage/ProductRange";
@@ -15,6 +18,8 @@ export default function Home() {
       <ProductRange />
       <TrendingProducts />
       <ClientLogos />
+      123
+      <FaqsSection />
     </main>
   );
 }
