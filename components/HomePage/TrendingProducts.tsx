@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Heart } from "lucide-react";
 import Image from "next/image";
 
@@ -37,19 +37,27 @@ const productsarr = [
 ];
 
 export default function TrendingProducts() {
+    const [isExpanded, setIsExpanded] = useState(false);
+    const text =
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua";
     return (
         <section className="py-12 bg-white">
             {/* Heading */}
-            <div className="text-center mb-10">
-                <h2 className="text-6xl font-semibold text-[#1C1C1C]">Trending Products 123</h2>
-                <p className=" max-w-2xl mx-auto mt-5 text-xl text-[#5E5E5E] ">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
-                    <span className="text-[#F06F38] font-bold cursor-pointer"> READ MORE</span>
+            <div className="max-w-[804px] mx-auto px-4">
+                <h2 className="md:text-6xl text-[34px] leading-none font-semibold text-title text-center font-DM_Sans">Trending Products</h2>
+                <p className="md:text-xl text-sm font-normal text-description text-center mt-3.5">
+                    {isExpanded ? text : `${text.substring(0, 122)} ... `}
+                    <button
+                        onClick={() => setIsExpanded(!isExpanded)}
+                        className="font-bold text-secondary hover:underline transition"
+                    >
+                        {isExpanded ? " SHOW LESS" : " READ MORE"}
+                    </button>
                 </p>
             </div>
 
             {/* Product Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 container mx-auto px-4 mt-12">
                 {productsarr.map((product) => (
                     <div
                         key={product.id}

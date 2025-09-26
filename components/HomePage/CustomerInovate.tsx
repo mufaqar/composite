@@ -3,49 +3,52 @@ import Image from "next/image";
 
 export default function CustomerInnovate() {
   return (
-    <main className="min-h-screen bg-white flex items-center justify-center py-16 px-6">
-      <div className="max-w-6xl w-full grid md:grid-cols-2 bg-white shadow-sm">
+    <section className="pt-16 mb-16">
+      <div className="flex md:flex-row flex-col gap-6">
         {/* Left Image */}
-        <div className="relative h-[400px] md:h-auto">
+        <div className="md:w-[45%] w-full flex">
           <Image
-            src="/fencing.jpg" // replace with your image in /public
+            src="/images/innovate.png" // replace with your image in /public
             alt="Composite fencing"
-            fill
-            className="object-cover"
+            width={644}
+            height={802}
           />
         </div>
 
         {/* Right Content */}
-        <div className="flex flex-col justify-center p-8 md:p-12 bg-white">
+        <div className="md:w-[55%] w-full md:px-0 px-4 md:pl-20 ">
           {/* Heading */}
-          <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-4">
+          <h2 className="md:text-6xl text-[34px] leading-none font-semibold text-title font-DM_Sans">
             We Listen to Our Customers to Innovate and Improve
           </h2>
 
           {/* Paragraph */}
-          <p className="text-gray-600 mb-6 leading-relaxed">
+          <p className="md:text-xl text-sm font-normal text-description mt-5">
             At Composite Warehouse, your feedback is invaluable. We actively
             listen to your needs and suggestions, which drives our commitment to
             continuous improvement and the introduction of new, high-quality
             products like our composite fencing range, specifically designed
             based on customer demand for a durable and stylish alternative.
           </p>
-          <p className="text-gray-600 mb-6 leading-relaxed">
+          <p className="md:text-xl text-sm font-normal text-description mt-5">
             Your insights help us ensure we’re always offering the best solutions
             for your outdoor projects.
           </p>
 
           {/* Testimonial block */}
-          <div className="bg-[#004225] text-white p-6 rounded-sm mt-auto">
-            <p className="text-lg font-medium leading-relaxed">
-              “I mentioned I was looking for composite fencing that could fit into my
-              existing posts, and Composite Warehouse delivered! So happy with the
-              new range.”
-            </p>
-            <p className="mt-4 text-sm italic">- Customer Name</p>
+          <div className="bg-[#003D2C] w-[calc(100%+170px)] md:py-[58px] flex items-start -ml-[170px] md:mt-[50px] md:-mb-[200px]">
+            <div className="mxa-w-[561px] mx-auto md:pl-[131px]">
+              <p className="md:text-[28px] text-lg font-normal font-DM_Sans text-white ">
+                “I mentioned I was looking for composite fencing that could fit into my
+                existing posts, and Composite Warehouse delivered! So happy with the
+                new range.”
+              </p>
+              <p className="md:text-xl text-base italic font-normal font-DM_Sans text-white mt-5">- Customer Name</p>
+            </div>
+            <Image src="/images/qoute.png" alt="qoute" width={168} height={131} />
           </div>
         </div>
       </div>
-    </main>
+    </section>
   );
 }

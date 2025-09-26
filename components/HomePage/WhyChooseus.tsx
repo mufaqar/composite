@@ -65,7 +65,7 @@ const WhyChooseus = () => {
         <section className="pt-24 pb-12">
             {/* Heading + Read More */}
             <div className="max-w-[804px] mx-auto px-4">
-                <h2 className="md:text-6xl text-[34px] leading-none font-semibold text-title text-center">
+                <h2 className="md:text-6xl text-[34px] leading-none font-semibold text-title text-center font-DM_Sans">
                     Why Choose Composite Warehouse?
                 </h2>
                 <p className="md:text-xl text-sm font-normal text-description text-center mt-3.5">
@@ -95,7 +95,7 @@ const WhyChooseus = () => {
                                     />
                                     <span className="absolute md:w-10 md:h-10 w-[22px] h-[22px] bg-primary/20 rounded-full -bottom-2"></span>
                                 </div>
-                                <h3 className="md:text-[28px] text-lg font-semibold text-title mt-4">
+                                <h3 className="md:text-[28px] text-lg font-semibold text-title font-DM_Sans mt-4">
                                     {item.title}
                                 </h3>
                                 <p className="md:text-xl text-sm font-normal text-description mt-5">

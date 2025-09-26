@@ -30,10 +30,10 @@ const ProductRange = () => {
     const text =
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua";
     return (
-        <section className="pt-24 pb-12">
+        <section className="pt-24">
             {/* Heading + Read More */}
             <div className="max-w-[804px] mx-auto px-4">
-                <h2 className="md:text-6xl text-[34px] leading-none font-semibold text-title text-center">
+                <h2 className="md:text-6xl text-[34px] leading-none font-semibold text-title text-center font-DM_Sans">
                     Explore Our Composite Product Range
                 </h2>
                 <p className="md:text-xl text-sm font-normal text-description text-center mt-3.5">
@@ -56,7 +56,7 @@ const ProductRange = () => {
                             flex flex-col justify-end  md:py-[70px] p-9 transition-all duration-500 ease-in-out
                             ${active === product.id ? "md:w-1/2 w-full md:h-[587px] h-[350px] md:px-[70px]" : "md:w-1/4 w-full md:h-[587px] h-[200px] md:px-[60px]"}
                             `} style={{ backgroundImage: `url(${product.img})` }} >
-                        <h3 className="md:text-[28px] text-lg font-semibold text-white">
+                        <h3 className="md:text-[28px] text-lg font-semibold text-white font-DM_Sans">
                             {product.title}
                         </h3>
                         <div className={`${active === product.id ? "block" : "hidden"}`}>

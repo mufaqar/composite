@@ -43,7 +43,7 @@ const FeaturedIcons = () => {
                                     className="md:w-[46px] md:h-[46px] w-[20px] h-[20px]"
                                 />
                             </span>
-                            <h3 className="md:text-[28px] text-lg font-bold text-title font-sans">
+                            <h3 className="md:text-[28px] text-lg font-bold text-title font-DM_Sans">
                                 {feature.label}
                             </h3>
                         </div>
