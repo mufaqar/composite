@@ -1,8 +1,11 @@
 @import "tailwindcss";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
 
 
 :root {
-  --background: #ffffff;
+  --background: #F6F6F6;
   --foreground: #171717;
   --primary: #00DFA2;
   --secondary: #F06F38;
@@ -17,18 +20,18 @@
   --color-secondary: var(--secondary);
   --color-title: var(--title);
   --color-description: var(--description);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
+ --font-DM_Sans: var(--font-sans);
 }
 
 .container {
   width: 100%;
 }
-
+.secondary_btn{
+  @apply md:text-lg text-sm font-bold text-title inline-flex w-fit md:px-7 md:py-[18px] px-5 py-2.5 bg-white rounded-4xl hover:bg-primary hover:text-white transition-all duration-300 ease-in-out;
+}
+.primary_btn{
+  @apply md:text-lg text-sm font-bold text-white inline-flex w-fit md:px-7 md:py-[18px] px-5 py-2.5 bg-secondary rounded-4xl hover:bg-primary hover:text-white transition-all duration-300 ease-in-out;
+}
 @media (min-width: 96rem) { /* 1536px */
   .container {
     max-width: 1280px;
