@@ -19,8 +19,12 @@
   --color-title: var(--title);
   --color-description: var(--description);
   --font-DM_Sans: var(--font-sans);
+  --font-Satoshi: var(--font-satoshi);
 }
 
+body {
+  font-family: var(--font-Satoshi);
+}
 .container {
   width: 100%;
 }

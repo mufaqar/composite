@@ -3,6 +3,36 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/Footer";
+import localFont from "next/font/local"
+
+// Define the font with multiple weights
+const satoshi = localFont({
+  src: [
+    {
+      path: "../public/fonts/Satoshi/Satoshi-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Satoshi/Satoshi-Medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Satoshi/Satoshi-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Satoshi/Satoshi-Italic.woff2",
+      weight: "400",
+      style: "italic",
+    },
+  ],
+  variable: "--font-satoshi",
+  display: "swap",
+})
+
 
 const dm_Sans = DM_Sans({
   subsets: ["latin"],
@@ -23,7 +53,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${dm_Sans.className} antialiased`}>
+      <body className={`${dm_Sans.className} ${satoshi.variable} antialiased`}>
         <Header />
         <main>{children}</main>
         <Footer />
