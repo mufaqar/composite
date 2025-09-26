@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-
 const logos = [
   { id: 1, src: "/images/logo-1.png", alt: "Logo 1" },
   { id: 2, src: "/images/logo-2.png", alt: "Logo 2" },
@@ -9,7 +8,6 @@ const logos = [
   { id: 4, src: "/images/logo-4.png", alt: "Logo 4" },
   { id: 5, src: "/images/logo-1.png", alt: "Logo 5" },
 ];
-
 export default function ClientLogos() {
   return (
     <section className="py-10 bg-[#F6F6F6]">
