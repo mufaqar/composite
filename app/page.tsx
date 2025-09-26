@@ -7,6 +7,7 @@ import CustomerInnovate from "@/components/HomePage/CustomerInovate";
 
 import FeaturedIcons from "@/components/HomePage/FeaturedIcons";
 import Hero from "@/components/HomePage/Hero";
+import Outdoor from "@/components/HomePage/Outdoor";
 import ProductRange from "@/components/HomePage/ProductRange";
 import Testimonials from "@/components/HomePage/Testimonails";
 import TrendingProducts from "@/components/HomePage/TrendingProducts";
@@ -24,6 +25,7 @@ export default function Home() {
       <TrendingProducts />
       <ClientLogos />
       <CustomerInnovate />
+      <Outdoor />
       <Testimonials />
       <FaqsSection />
       <BlogsSection />
