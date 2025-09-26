@@ -1,5 +1,6 @@
 import BlogsSection from "@/components/BlogSection";
 import FaqsSection from "@/components/FaqSection";
+import Advanteges from "@/components/HomePage/Advanteges";
 import ClientLogos from "@/components/HomePage/ClientLogos";
 import CustomerInnovate from "@/components/HomePage/CustomerInovate";
 
@@ -19,13 +20,13 @@ export default function Home() {
       <FeaturedIcons />
       <WhyChooseus />
       <ProductRange />
+      <Advanteges />
       <TrendingProducts />
       <ClientLogos />
-    <CustomerInnovate/>
-      <FaqsSection />
+      <CustomerInnovate />
+      {/*<FaqsSection />
       <Testimonials />
-
-      <BlogsSection />
+      <BlogsSection /> */}
     </main>
   );
 }
