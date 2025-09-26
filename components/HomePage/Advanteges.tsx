@@ -24,7 +24,7 @@ const Advanteges = () => {
     const [activeIndex, setActiveIndex] = useState(0);
 
     return (
-        <section className="pt-16 bg-background relative flex mb-20">
+        <section className="pt-16 bg-background relative flex mb-20 overflow-hidden">
             <Image
                 src="/images/boxes2.png"
                 alt="boxes2"
