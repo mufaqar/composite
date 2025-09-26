@@ -2,15 +2,13 @@
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
 
-
-
 :root {
-  --background: #F6F6F6;
+  --background: #f6f6f6;
   --foreground: #171717;
-  --primary: #00DFA2;
-  --secondary: #F06F38;
-  --title: #1C1C1C;
-  --description: #5E5E5E;
+  --primary: #00dfa2;
+  --secondary: #f06f38;
+  --title: #1c1c1c;
+  --description: #5e5e5e;
 }
 
 @theme inline {
@@ -20,21 +18,21 @@
   --color-secondary: var(--secondary);
   --color-title: var(--title);
   --color-description: var(--description);
- --font-DM_Sans: var(--font-sans);
+  --font-DM_Sans: var(--font-sans);
 }
 
 .container {
   width: 100%;
 }
-.secondary_btn{
+.secondary_btn {
   @apply md:text-lg text-sm font-bold text-title inline-flex w-fit md:px-7 md:py-[18px] px-5 py-2.5 bg-white rounded-4xl hover:bg-primary hover:text-white transition-all duration-300 ease-in-out;
 }
-.primary_btn{
+.primary_btn {
   @apply md:text-lg text-sm font-bold text-white inline-flex w-fit md:px-7 md:py-[18px] px-5 py-2.5 bg-secondary rounded-4xl hover:bg-primary hover:text-white transition-all duration-300 ease-in-out;
 }
-@media (min-width: 96rem) { /* 1536px */
+@media (min-width: 96rem) {
+  /* 1536px */
   .container {
     max-width: 1280px;
   }
 }
-
