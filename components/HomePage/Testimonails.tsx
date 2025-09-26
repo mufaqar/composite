@@ -78,14 +78,14 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="bg-black text-white py-20">
+    <section className="bg-black pt-20 relative">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center md:mb-16 mb-12">
+          <h2 className="md:text-6xl text-[34px] leading-none font-semibold text-white font-DM_Sans">
             What Our <br /> Customers Say
           </h2>
-          <p className="mt-4 md:mt-0 text-gray-300 max-w-md text-sm md:text-base">
+          <p className="md:text-xl text-sm font-normal text-white mt-5">
             Don’t just take our word for it—here’s what our satisfied clients
             have to say
           </p>
@@ -95,9 +95,9 @@ const Testimonials = () => {
         <Slider {...settings}>
           {testimonials.map((t) => (
             <div key={t.id} className="px-4">
-              <div className="bg-gray-900 p-6 rounded-lg h-full flex flex-col justify-between">
-                <FaQuoteLeft className="text-green-500 text-2xl mb-4" />
-                <p className="text-gray-200 mb-6 italic">“{t.text}”</p>
+              <div className="bg-[#2A2A2A] p-6 h-full flex flex-col justify-between">
+                <FaQuoteLeft className="text-primary text-2xl mb-4 -rotate-180" />
+                <p className="text-white mb-6">“{t.text}”</p>
 
                 <div className="flex items-center gap-4 mt-auto">
                   <Image
@@ -108,20 +108,22 @@ const Testimonials = () => {
                     className="rounded-full object-cover"
                   />
                   <div>
-                    <h4 className="font-semibold">{t.name}</h4>
-                    <p className="text-sm text-gray-400">{t.role}</p>
-                    <div className="flex text-yellow-400 mt-1">
-                      {Array.from({ length: t.rating }).map((_, i) => (
-                        <FaStar key={i} />
-                      ))}
-                    </div>
+                    <h4 className="md:text-lg text-sm font-semibold text-white">{t.name}</h4>
+                    <p className="md:text-base text-sm text-[#7E7E7E]">{t.role}</p>
+
                   </div>
+                </div>
+                <div className="flex text-[#CEC400] mt-5">
+                  {Array.from({ length: t.rating }).map((_, i) => (
+                    <FaStar key={i} />
+                  ))}
                 </div>
               </div>
             </div>
           ))}
         </Slider>
       </div>
+      <Image src="/images/boxes2.png" alt='boxes2' width={232} height={155} className='md:w-[232px] md:h-[155px] w-[87.5px] h-[58.33] ml-auto mr-0 md:mt-16 mt-8' />
     </section>
   );
 };
