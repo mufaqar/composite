@@ -56,7 +56,7 @@ const Header = () => {
               {menuItems.map((item, index) => (
                 <li key={index}>
                   <Link
-                    href={item.href}
+                    href="#"
                     className="text-sm font-medium text-white hover:text-gray-300 md:p-0 transition-all duration-300 ease-in-out"
                   >
                     {item.label}
