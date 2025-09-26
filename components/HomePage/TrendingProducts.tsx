@@ -6,7 +6,7 @@ import Image from "next/image";
 const productsarr = [
     {
         id: 1,
-        title: "Capped Composite Fencing Panel — Wide Finish",
+        title: "Capped Composite Fencing Panel ",
         description: "A short description goes in here",
         price: "€299.99",
         discountPrice: "€249.99",
@@ -103,9 +103,6 @@ export default function TrendingProducts() {
                                 {product.title}
                             </h3>
                             <p className="text-gray-500 text-md">{product.description}</p>
-
-
-
                             {/* Icons row */}
                             <div className="flex gap-3 mt-3">
                                 <span className="w-13 h-13 bg-[#00DFA21C] rounded-full flex items-center justify-center text-teal-600 p-2">  <Image src="/images/products-icon-4.svg" width={500} height={500} alt="Picture" /></span>
