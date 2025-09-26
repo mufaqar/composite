@@ -77,7 +77,7 @@ const Header = () => {
           </Link>
           <Link
             href="#"
-            className="text-lg font-bold text-black inline-flex w-fit md:px-7 md:py-[18px] px-5 py-2.5 bg-white rounded-4xl hover:bg-primary hover:text-white transition-all duration-300 ease-in-out"
+            className="text-lg font-bold text-title inline-flex w-fit md:px-7 md:py-[18px] px-5 py-2.5 bg-white rounded-4xl hover:bg-primary hover:text-white transition-all duration-300 ease-in-out"
           >
             Request a Free Sample
           </Link>
