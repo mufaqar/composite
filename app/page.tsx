@@ -24,10 +24,10 @@ export default function Home() {
       <TrendingProducts />
       <ClientLogos />
       <CustomerInnovate />
+      <Testimonials />
       <FaqsSection />
-     <Testimonials />
-     <BlogsSection /> 
-      
+      <BlogsSection />
+
     </main>
   );
 }

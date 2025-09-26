@@ -24,7 +24,7 @@ const Advanteges = () => {
     const [activeIndex, setActiveIndex] = useState(0);
 
     return (
-        <section className="pt-16 bg-background relative flex mb-20 overflow-hidden">
+        <section className="pt-16 bg-background relative flex mb-20 ">
             <Image
                 src="/images/boxes2.png"
                 alt="boxes2"
@@ -35,7 +35,7 @@ const Advanteges = () => {
 
             <div className="flex md:flex-row flex-col gap-6 mt-10">
                 {/* Left Side */}
-                <div className="2xl:w-[45%] md:w-[55%] w-full md:px-0 px-4">
+                <div className="2xl:w-[45%] md:w-[55%] w-full md:px-0 px-4 md:pb-16 pb-8">
                     <h4 className="text-lg font-bold text-primary font-DM_Sans md:block hidden mb-4">
                         Why We're Different:
                     </h4>
@@ -90,7 +90,7 @@ const Advanteges = () => {
                         alt="advantage"
                         width={605}
                         height={627}
-                        className="w-full -mb-20"
+                        className="md:w-full w-fit -mb-20"
                     />
                 </div>
             </div>

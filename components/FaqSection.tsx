@@ -29,35 +29,33 @@ const FaqsSection = () => {
   };
 
   return (
-    <section className="md:py-20 py-16">
+    <section className="md:py-20 py-16 bg-background">
       <div className="max-w-[804px] mx-auto px-4">
-        <h2 className="md:text-6xl text-[34px] leading-none font-semibold text-title text-center font-DM_Sans">
+        <h2 className="md:text-6xl text-[34px] leading-none font-semibold text-title text-center font-DM_Sans mb-14">
           Frequently Asked Questions
         </h2>
         {faqs.map((faq, idx) => (
-          <div key={idx} className="py-4 max-w-[1024px] mx-auto border-b">
+          <div key={idx} className="md:py-8 md:px-5 py-4 max-w-[1024px] mx-auto border-b border-[#E7EAEE]">
             {/* Question row */}
             <div
               className="flex justify-between items-center cursor-pointer transition-all duration-300"
               onClick={() => toggleFaq(idx)}
             >
-              <h3 className="md:text-[28px] text-lg font-semibold text-title font-DM_Sans">
+              <h3 className="md:text-lg text-sm font-semibold text-title font-DM_Sans">
                 {faq.question}
               </h3>
               <FaChevronDown
-                className={`md:text-xl text-sm font-normal text-description mt-3 transform transition-transform duration-300 ${
-                  openIndex === idx ? "rotate-180" : ""
-                }`}
+                className={`md:text-base text-sm font-normal text-description mt-3 transform transition-transform duration-300 ${openIndex === idx ? "rotate-180" : ""
+                  }`}
               />
             </div>
 
             {/* Answer */}
             <div
-              className={`overflow-hidden transition-all duration-300 ${
-                openIndex === idx ? "max-h-40 mt-2" : "max-h-0"
-              }`}
+              className={`overflow-hidden transition-all duration-300 ${openIndex === idx ? "max-h-40 mt-5" : "max-h-0"
+                }`}
             >
-              <p className="font-poppins text-black">{faq.answer}</p>
+              <p className="text-description">{faq.answer}</p>
             </div>
           </div>
         ))}

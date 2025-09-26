@@ -38,14 +38,14 @@ const BlogsSection = () => {
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-[65px]">
           {blogs.map((blog) => (
-            <div key={blog.id} className="bg-white shadow-sm">
+            <div key={blog.id} className="bg-white">
               {/* Image */}
-              <div className="relative w-full h-64">
+              <div className="relative w-full">
                 <Image
                   src={blog.image}
                   alt={blog.title}
-                  fill
-                  className="object-cover"
+                  width={400}
+                  height={400}
                 />
               </div>
 
@@ -58,9 +58,11 @@ const BlogsSection = () => {
                 <h3 className="text-[22px]  font-normal font-DM_Sans">
                   {blog.title}
                 </h3>
-                <p className="text-sm text-description mt-2">
-                  {blog.readTime}
-                </p>
+                <div className="py-2 border-t border-[#D2D2D7]">
+                  <p className="text-sm text-description ">
+                    {blog.readTime}
+                  </p>
+                </div>
               </div>
             </div>
           ))}
