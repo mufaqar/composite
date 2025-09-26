@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React, { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 
@@ -59,6 +60,11 @@ const FaqsSection = () => {
             </div>
           </div>
         ))}
+        <div className='w-fit mx-auto flex md:flex-row flex-col gap-5 mt-10'>
+          <Link href="#" className='primary_btn'>
+            View All FAQs
+          </Link>
+        </div>
       </div>
     </section>
   );
