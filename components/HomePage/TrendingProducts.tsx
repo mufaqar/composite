@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import { Heart } from "lucide-react";
 import Image from "next/image";
 import HeadingSection from "../HeadingSection";
+import { CiHeart } from "react-icons/ci";
 
 const productsarr = [
     {
@@ -61,7 +61,7 @@ export default function TrendingProducts() {
                                 className="w-full object-cover"
                             />
                             <button className="absolute top-2.5 right-2.5 bg-white p-2 rounded-full shadow cursor-pointer z-[3]">
-                                <Heart className="w-7 h-7 text-description" />
+                                <CiHeart className="w-7 h-7 text-description" />
                             </button>
 
                             {/* Buttons overlay (only for first product) */}
