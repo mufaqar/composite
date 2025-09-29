@@ -1,11 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
+import OutDoorSlider from "./OutdoorSlider";
+import Link from "next/link";
 
 const Outdoor = () => {
   return (
-    <section className="pt-16 bg-[#F0FAF7] relative  mb-20 ">
+    <section className="py-16 bg-[#F0FAF7] relative ">
       <Image
         src="/images/boxes2.png"
         alt="boxes2"
@@ -13,8 +15,7 @@ const Outdoor = () => {
         height={155}
         className="md:w-[232px] md:h-[155px] w-[87.5px] h-[58.33] -rotate-90 md:-ml-10 md:-mt-6 md:block hidden"
       />
-
-      <div className="max-w-[804px] mx-auto px-4 -mt-[80px] ">
+      <div className="max-w-[804px] mx-auto px-4 mb-10">
         <h2 className="md:text-6xl text-[34px] leading-none font-semibold text-title text-center font-DM_Sans">
           Create Your Dream Outdoor Space: Inspiration & Ideas
         </h2>
@@ -24,6 +25,12 @@ const Outdoor = () => {
           discover how Composite Warehouse can help you bring your vision to
           life.
         </p>
+      </div>
+      <OutDoorSlider />
+      <div className='w-fit mx-auto flex md:flex-row flex-col gap-5 mt-5'>
+        <Link href="#" className='primary_btn'>
+          View Our Project Gallery
+        </Link>
       </div>
     </section>
   );
