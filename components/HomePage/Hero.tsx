@@ -7,7 +7,7 @@ const Hero = () => {
     <section className="bg-[url('/images/main-hero.png')] bg-cover bg-no-repeat flex items-center justify-center md:pt-[350px] pt-[300px] pb-[100px] relative">
       <Image src="/images/boxes1.png" alt='boxes1' width={185} height={249} className='absolute left-0 md:top-[154px] top-28 md:w-[185px] md:h-[249px] w-[94px] h-[126px]' />
       <div className='max-w-[1170px] mx-auto px-4'>
-        <h1 className='md:text-7xl text-[40px] leading-none font-medium text-white text-center font-DM_Sans'>
+        <h1 className='md:text-7xl text-[38px] leading-none font-medium text-white text-center font-DM_Sans'>
           Transform Your <b>Outdoor Space</b> With Premium, Low-Maintenance Composite Materials
         </h1>
         <p className='md:text-lg text-sm font-normal text-white text-center mt-5 max-w-[840px] mx-auto'>

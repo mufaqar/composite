@@ -21,8 +21,8 @@ export default function Home() {
       <FeaturedIcons />
       <WhyChooseus />
       <ProductRange />
-      <Advanteges />
       <TrendingProducts />
+      <Advanteges />
       <ClientLogos />
       <CustomerInnovate />
       <Outdoor />

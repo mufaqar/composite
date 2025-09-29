@@ -1,9 +1,9 @@
 "use client";
 import Link from 'next/link';
 import React, { useState } from 'react'
+import HeadingSection from '../HeadingSection';
 
 const ProductRange = () => {
-    const [isExpanded, setIsExpanded] = useState(false);
     const [active, setActive] = useState<number | null>(0);
 
     const products = [
@@ -27,25 +27,10 @@ const ProductRange = () => {
         },
     ];
 
-    const text =
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua";
     return (
         <section className="pt-24">
             {/* Heading + Read More */}
-            <div className="max-w-[804px] mx-auto px-4">
-                <h2 className="md:text-6xl text-[34px] leading-none font-semibold text-title text-center font-DM_Sans">
-                    Explore Our Composite Product Range
-                </h2>
-                <p className="md:text-xl text-sm font-normal text-description text-center mt-3.5">
-                    {isExpanded ? text : `${text.substring(0, 122)} ... `}
-                    <button
-                        onClick={() => setIsExpanded(!isExpanded)}
-                        className="font-bold text-secondary hover:underline transition"
-                    >
-                        {isExpanded ? " SHOW LESS" : " READ MORE"}
-                    </button>
-                </p>
-            </div>
+            <HeadingSection title="Explore Our Composite Product Range" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua" readMore />
             <div className='flex md:flex-row flex-col w-full mt-12'>
                 {products.map((product) => (
                     <div

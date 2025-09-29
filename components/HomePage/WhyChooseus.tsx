@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useRef, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Slider from "react-slick";
+import HeadingSection from "../HeadingSection";
 
 const WhyUS = [
     {
@@ -36,10 +37,6 @@ const WhyUS = [
 ];
 
 const WhyChooseus = () => {
-    const [isExpanded, setIsExpanded] = useState(false);
-    const text =
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua";
-
     const sliderRef = useRef<any>(null);
 
     const settings = {
@@ -64,20 +61,8 @@ const WhyChooseus = () => {
     return (
         <section className="pt-24 pb-12">
             {/* Heading + Read More */}
-            <div className="max-w-[804px] mx-auto px-4">
-                <h2 className="md:text-6xl text-[34px] leading-none font-semibold text-title text-center font-DM_Sans">
-                    Why Choose Composite Warehouse?
-                </h2>
-                <p className="md:text-xl text-sm font-normal text-description text-center mt-3.5">
-                    {isExpanded ? text : `${text.substring(0, 122)} ... `}
-                    <button
-                        onClick={() => setIsExpanded(!isExpanded)}
-                        className="font-bold text-secondary hover:underline transition"
-                    >
-                        {isExpanded ? " SHOW LESS" : " READ MORE"}
-                    </button>
-                </p>
-            </div>
+            <HeadingSection title="Why Choose Composite Warehouse?" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+            readMore />
 
             {/* Slider Section */}
             <div className="container mx-auto px-4 mt-12 relative">
