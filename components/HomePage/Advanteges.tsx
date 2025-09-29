@@ -77,7 +77,7 @@ const Advanteges = () => {
                 </div>
 
                 {/* Right Side */}
-                <div className="2xl:w-[55%] md:w-[45%] w-full flex">
+                <div className="2xl:w-[55%] md:w-[45%] w-full flex ">
                     <Image
                         src="/images/boxes2.png"
                         alt="boxes2"
@@ -90,7 +90,7 @@ const Advanteges = () => {
                         alt="advantage"
                         width={605}
                         height={627}
-                        className="md:w-full w-fit -mb-20"
+                        className="md:w-full w-fit -mb-20 overflow-x-hidden"
                     />
                 </div>
             </div>
