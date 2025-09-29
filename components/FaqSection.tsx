@@ -3,6 +3,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
+import HeadingSection from "./HeadingSection";
 
 const faqs = [
   {
@@ -31,10 +32,9 @@ const FaqsSection = () => {
 
   return (
     <section className="md:py-20 py-16 bg-background">
+      {/* Heading + Read More */}
+      <HeadingSection title="Frequently Asked Questions" desc="" />
       <div className="max-w-[804px] mx-auto px-4">
-        <h2 className="md:text-6xl text-[34px] leading-none font-semibold text-title text-center font-DM_Sans mb-14">
-          Frequently Asked Questions
-        </h2>
         {faqs.map((faq, idx) => (
           <div key={idx} className="md:py-8 md:px-5 py-4 max-w-[1024px] mx-auto border-b border-[#E7EAEE]">
             {/* Question row */}

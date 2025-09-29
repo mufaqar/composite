@@ -87,16 +87,33 @@ const OutDoorSlider: React.FC = () => {
         speed: 600,
         slidesToShow: 5,
         slidesToScroll: 1,
+        rows: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    rows: 1,
+                },
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 1,
+                    rows: 5,
+                },
+            },
+        ],
     };
 
     return (
-        <Slider {...settings} className="!w-full">
+        <Slider {...settings} className="!w-full mt-10">
             {slides.map((slide) => (
                 <div key={slide.id}>
-                    <div className="flex items-center justify-center w-full h-[620px] px-2">
+                    <div className="flex items-center justify-center w-full md:h-[620px] px-2 md:py-0 py-2">
                         {/* Case: slide has 2 images */}
                         {slide.images.length === 2 ? (
-                            <div className="grid grid-rows-2 gap-4 w-full">
+                            <div className="grid md:grid-cols-1 grid-cols-2 gap-4 w-full">
                                 {slide.images.map((img, index) => (
                                     <div
                                         key={index}
@@ -115,7 +132,7 @@ const OutDoorSlider: React.FC = () => {
                                             className="
                         absolute inset-0 
                         bg-gradient-to-t from-black via-black/30 
-                        flex flex-col justify-end px-4 py-7 
+                        flex flex-col justify-end px-4 py-9 
                         opacity-0 translate-y-5
                         transition-all duration-500 ease-in-out 
                         group-hover:opacity-100 group-hover:translate-y-0
@@ -147,7 +164,7 @@ const OutDoorSlider: React.FC = () => {
                                     className="
                     absolute inset-0 
                     bg-gradient-to-t from-black via-black/30 
-                    flex flex-col justify-end px-4 py-7 
+                    flex flex-col justify-end px-4 py-9 
                     opacity-0 translate-y-5
                     transition-all duration-500 ease-in-out 
                     group-hover:opacity-100 group-hover:translate-y-0

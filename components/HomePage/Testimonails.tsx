@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import Slider from "react-slick";
-
 import { FaQuoteLeft, FaStar } from "react-icons/fa";
-import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+import { useRef } from "react";
 
 // testimonialData.ts
 const testimonials = [
@@ -32,39 +32,28 @@ const testimonials = [
     image: "/images/testimonail.png",
     rating: 5,
   },
+  {
+    id: 4,
+    text: "I’m impressed with the durability and look of the cladding. Great choice!",
+    name: "Michael B.",
+    role: "Homeowner",
+    image: "/images/testimonail.png",
+    rating: 5,
+  },
 ];
 
-// Custom arrows
-const PrevArrow = ({ onClick }: { onClick?: () => void }) => (
-  <button
-    onClick={onClick}
-    className="absolute -left-8 top-1/2 -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700 z-10"
-  >
-    <MdArrowBackIos />
-  </button>
-);
-
-const NextArrow = ({ onClick }: { onClick?: () => void }) => (
-  <button
-    onClick={onClick}
-    className="absolute -right-8 top-1/2 -translate-y-1/2 bg-orange-500 text-white p-2 rounded-full hover:bg-orange-600 z-10"
-  >
-    <MdArrowForwardIos />
-  </button>
-);
 
 const Testimonials = () => {
+  const sliderRef = useRef<any>(null);
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 600,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
-    arrows: true,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
+    arrows: false,
     responsive: [
       {
         breakpoint: 1024,
@@ -79,9 +68,9 @@ const Testimonials = () => {
 
   return (
     <section className="bg-black pt-20 relative">
-      <div className="container mx-auto px-4">
+      <div className="">
         {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center md:mb-16 mb-12">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-start md:items-center md:mb-16 mb-12">
           <h2 className="md:text-6xl text-[34px] leading-none font-semibold text-white font-DM_Sans">
             What Our <br /> Customers Say
           </h2>
@@ -92,7 +81,7 @@ const Testimonials = () => {
         </div>
 
         {/* Slider */}
-        <Slider {...settings}>
+        <Slider ref={sliderRef} {...settings}>
           {testimonials.map((t) => (
             <div key={t.id} className="px-4">
               <div className="bg-[#2A2A2A] p-6 h-full flex flex-col justify-between">
@@ -122,6 +111,21 @@ const Testimonials = () => {
             </div>
           ))}
         </Slider>
+        {/* Custom Arrows */}
+        <div className="flex items-center gap-5 w-fit mx-auto mt-16">
+          <button
+            onClick={() => sliderRef.current?.slickPrev()}
+            className="bg-transparent text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md hover:bg-secondary border border-white transition"
+          >
+            <FaChevronLeft size={14} />
+          </button>
+          <button
+            onClick={() => sliderRef.current?.slickNext()}
+            className="bg-secondary text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md hover:bg-primary border border-secondary transition"
+          >
+            <FaChevronRight size={14} />
+          </button>
+        </div>
       </div>
       <Image src="/images/boxes2.png" alt='boxes2' width={232} height={155} className='md:w-[232px] md:h-[155px] w-[87.5px] h-[58.33] ml-auto mr-0 md:mt-16 mt-8' />
     </section>

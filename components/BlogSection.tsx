@@ -1,6 +1,7 @@
 'use client'
 
 import Image from "next/image"
+import HeadingSection from "./HeadingSection"
 
 const blogs = [
   {
@@ -29,12 +30,9 @@ const blogs = [
 const BlogsSection = () => {
   return (
     <section className="py-20 bg-white">
+      {/* Heading + Read More */}
+      <HeadingSection title="our blogs" desc="" />
       <div className="container mx-auto px-4">
-        {/* Heading */}
-        <h2 className="md:text-6xl text-[34px] leading-none font-semibold text-title text-center font-DM_Sans">
-          Our Blogs
-        </h2>
-
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-[65px]">
           {blogs.map((blog) => (
