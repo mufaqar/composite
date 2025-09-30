@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { it } from "node:test";
 import React, { useState } from "react";
 import { FaBars, FaPhoneVolume } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
@@ -58,7 +59,7 @@ const Header = () => {
               {menuItems.map((item, index) => (
                 <li key={index}>
                   <Link
-                    href="#"
+                    href={item.href}
                     className={`${pathname === "/" ? "text-white hover:text-white/70 " : "text-title hover:text-primary"} text-sm font-medium md:p-0 transition-all duration-300 ease-in-out`}
                   >
                     {item.label}

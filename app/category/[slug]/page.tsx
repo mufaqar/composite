@@ -124,10 +124,21 @@ const categories: Category[] = [
     },
 ]
 
-export default function ProductPage({ params }: { params: { slug: string } }) {
-    const category = categories.find((c) => c.slug === params.slug)
+export default async function ProductPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  // params is available directly (no need for await in Next.js 14/15 stable)
+  const { slug } = params;
 
-    if (!category) return notFound()
+  const category = categories.find((c) => c.slug === slug);
+
+
+
+  if (!category) return notFound();
+
+   
 
     return (
         <main>
