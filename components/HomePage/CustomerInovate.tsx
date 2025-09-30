@@ -18,7 +18,7 @@ export default function CustomerInnovate() {
 
         {/* Right Content */}
         <div className="md:w-[55%] w-full md:px-0 px-4">
-          <div className="px-4 max-w-[650px] mx-auto pt-16">
+          <div className="px-4 pt-16 2xl:px-[100px]">
             {/* Heading */}
             <h2 className="md:text-6xl text-[34px] leading-none font-semibold text-title font-DM_Sans">
               We Listen to Our Customers to Innovate and Improve
@@ -40,7 +40,7 @@ export default function CustomerInnovate() {
 
           {/* Testimonial block */}
           <div className="bg-[#003D2C] md:w-[calc(100%+100px)] md:py-[39px] px-7 py-9  md:-ml-[100px] mt-[50px] -mb-[50px] md:mb-0 2xl:mt-[160px] 2xl:-mb-[160px] relative md:z-0 z-[3]">
-            <div className=" md:pl-[100px] flex md:flex-row flex-col items-start">
+            <div className="md:pl-[100px] flex md:flex-row flex-col items-start">
               <p className="md:text-[28px] text-lg font-normal font-DM_Sans text-white max-w-[561px] mx-auto">
                 “I mentioned I was looking for composite fencing that could fit into my
                 existing posts, and Composite Warehouse delivered! So happy with the

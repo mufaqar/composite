@@ -8,6 +8,7 @@ interface Post {
   id: number;
   title: string;
   date: string;
+  category: string;
   readTime: string;
   image: string;
 }
@@ -15,29 +16,33 @@ interface Post {
 const posts: Post[] = [
   {
     id: 1,
-    title: "What Are the Different Types of Composite Decking?",
-    date: "Mar 2024",
-    readTime: "3 min read",
+    date: "13 Feb 2022",
+    category: "Design",
+    title: "Timeless product crafted beautifully with a sustainable materials",
+    readTime: "3 minute read",
     image: "/images/blog1.png",
   },
   {
     id: 2,
-    title: "Garden Fencing Colours",
-    date: "Mar 2024",
-    readTime: "2 min read",
+    date: "12 Jan 2022",
+    category: "Lifestyle",
+    title: "Timeless product crafted beautifully with a sustainable materials",
+    readTime: "8 minute read",
     image: "/images/blog2.png",
   },
   {
     id: 3,
-    title: "Garden Privacy Ideas",
-    date: "Mar 2024",
-    readTime: "2 min read",
+    date: "11 Dec 2021",
+    category: "Inspiration",
+    title: "Timeless product crafted beautifully with a sustainable materials",
+    readTime: "4 minute read",
     image: "/images/blog3.png",
   },
   {
     id: 4,
     title: "How to Increase your Property Value?",
     date: "Mar 2024",
+    category: "Inspiration",
     readTime: "4 min read",
     image: "/images/blog1.png",
   },
@@ -45,6 +50,7 @@ const posts: Post[] = [
     id: 5,
     title: "Fencing Costs",
     date: "Mar 2024",
+    category: "Lifestyle",
     readTime: "2 min read",
     image: "/images/blog2.png",
   },
@@ -52,6 +58,7 @@ const posts: Post[] = [
     id: 6,
     title: "Tips to Improve your Outdoor Space",
     date: "Mar 2024",
+    category: "Design",
     readTime: "3 min read",
     image: "/images/blog3.png",
   },
@@ -59,6 +66,7 @@ const posts: Post[] = [
     id: 7,
     title: "Ways to Decorate your Garden",
     date: "Mar 2024",
+    category: "Inspiration",
     readTime: "3 min read",
     image: "/images/blog2.png",
   },
@@ -66,6 +74,7 @@ const posts: Post[] = [
     id: 8,
     title: "Modern Patio Ideas",
     date: "Mar 2024",
+    category: "Lifestyle",
     readTime: "2 min read",
     image: "/images/blog1.png",
   },
@@ -73,6 +82,7 @@ const posts: Post[] = [
     id: 9,
     title: "Outdoor Furniture Trends",
     date: "Mar 2024",
+    category: "Design",
     readTime: "2 min read",
     image: "/images/blog3.png",
   },

@@ -1,8 +1,10 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import HeadingSection from "../HeadingSection";
-import { CiHeart } from "react-icons/ci";
+import ProductBox from "../Product/ProductBox";
+import Slider from "react-slick";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
 const productsarr = [
     {
@@ -35,108 +37,67 @@ const productsarr = [
         image: "/images/Products-3.png",
         buttons: true,
     },
+    {
+        id: 1,
+        title: "Capped Composite Fencing Panel ",
+        description: "A short description goes in here",
+        price: "€299.99",
+        discountPrice: "€249.99",
+        rating: 4.5,
+        image: "/images/Products-1.png", // replace with real image path
+        buttons: true,
+    },
 ];
 
 export default function TrendingProducts() {
+    const sliderRef = useRef<any>(null);
+
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 600,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: false, // disable default arrows
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: { slidesToShow: 2 },
+            },
+            {
+                breakpoint: 640,
+                settings: { slidesToShow: 1 },
+            },
+        ],
+    };
 
     return (
         <section className="py-12 bg-white">
             {/* Heading + Read More */}
             <HeadingSection title="Trending Products" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
                 readMore />
-            {/* Product Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 container mx-auto px-4 mt-12">
-                {productsarr.map((product) => (
-                    <div
-                        key={product.id}
-                        className="relative"
-                    >
-                        {/* Image */}
-                        <div className="relative group overflow-hidden">
-                            <Image
-                                src={product.image}
-                                width={500}
-                                height={500}
-                                alt={product.title}
-                                className="w-full object-cover"
-                            />
-                            <button className="absolute top-2.5 right-2.5 bg-white p-2 rounded-full shadow cursor-pointer z-[3]">
-                                <CiHeart className="w-7 h-7 text-description" />
-                            </button>
 
-                            {/* Buttons overlay (only for first product) */}
-                            {product.buttons && (
-                                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition bg-black/50">
-                                    <button className="px-5 py-2 bg-secondary text-white font-semibold rounded-full hover:bg-primary">
-                                        View product
-                                    </button>
-                                    <button className="px-5 py-2 bg-white text-black hover:text-white font-semibold rounded-full hover:bg-primary">
-                                        Get Free Sample
-                                    </button>
-                                </div>
-                            )}
+            <div className="container mx-auto px-4 mt-12 relative">
+                <Slider ref={sliderRef} {...settings}>
+                    {productsarr.map((product) => (
+                        <div key={product.id} className="px-2">
+                            <ProductBox data={product} />
                         </div>
-
-                        {/* Content */}
-                        <div className="mt-4">
-                            {/* Rating */}
-                            <div className="flex items-center gap-1 text-yellow-500 text-lg">
-                                {"★".repeat(4)}{" "}
-                                <span className="text-description ml-1 ">{product.rating}</span>
-                            </div>
-
-                            {/* Title */}
-                            <h3 className="text-lg font-bold mt-2 text-black">
-                                {product.title}
-                            </h3>
-                            <p className="text-description text-md">{product.description}</p>
-                            {/* Icons row */}
-                            <div className="flex gap-3 mt-3">
-                                <button className="flex flex-col justify-center items-center group relative w-fit">
-                                    <span className="bg-primary min-w-[81px] w-full text-white text-xs font-normal font-Satoshi px-1.5 py-0.5 rounded translate-y-8 transition-all ease-in-out duration-300 hidden group-hover:block absolute group-hover:-translate-y-10">
-                                        fast Delivery
-                                    </span>
-                                    <span className="w-13 h-13 bg-[#00DFA21C] rounded-full flex items-center justify-center text-primary p-2">
-                                        <Image src="/images/products-icon-4.svg" width={500} height={500} alt="Picture" />
-                                    </span>
-                                </button>
-                                <button className="flex flex-col justify-center items-center group relative w-fit">
-                                    <span className="bg-primary min-w-[81px] w-full text-white text-xs font-normal font-Satoshi px-1.5 py-0.5 rounded translate-y-8 transition-all ease-in-out duration-300 hidden group-hover:block absolute group-hover:-translate-y-10">
-                                        fast Delivery
-                                    </span>
-                                    <span className="w-13 h-13 bg-[#00DFA21C] rounded-full flex items-center justify-center text-primary p-2"  >
-                                        <Image src="/images/products-icon-1.svg" width={500} height={500} alt="Picture" />
-                                    </span>
-                                </button>
-                                <button className="flex flex-col justify-center items-center group relative w-fit">
-                                    <span className="bg-primary min-w-[81px] w-full text-white text-xs font-normal font-Satoshi px-1.5 py-0.5 rounded translate-y-8 transition-all ease-in-out duration-300 hidden group-hover:block absolute group-hover:-translate-y-10">
-                                        fast Delivery
-                                    </span>
-                                    <span className="w-13 h-13 bg-[#00DFA21C] rounded-full flex items-center justify-center text-primary p-2">
-                                        <Image src="/images/products-icon-3.svg" width={500} height={500} alt="Picture" />
-                                    </span>
-                                </button>
-                                <button className="flex flex-col justify-center items-center group relative w-fit">
-                                    <span className="bg-primary min-w-[81px] w-full text-white text-xs font-normal font-Satoshi px-1.5 py-0.5 rounded translate-y-8 transition-all ease-in-out duration-300 hidden group-hover:block absolute group-hover:-translate-y-10">
-                                        fast Delivery
-                                    </span>
-                                    <span className="w-13 h-13 bg-[#00DFA21C] rounded-full flex items-center justify-center text-primary p-2">
-                                        <Image src="/images/products-icon-2.svg" width={500} height={500} alt="Picture" />
-                                    </span>
-                                </button>
-                            </div>
-                            {/* Price */}
-                            <div className="mt-3 flex items-center gap-2">
-                                <span className="text-description line-through">
-                                    {product.price}
-                                </span>
-                                <span className="text-title font-semibold text-md">
-                                    {product.discountPrice}
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                ))}
+                    ))}
+                </Slider>
+                {/* Custom Arrows */}
+                <button
+                    onClick={() => sliderRef.current?.slickPrev()}
+                    className="absolute left-0 top-1/3 -translate-y-1/2 bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md hover:bg-secondary transition"
+                >
+                    <FaChevronLeft size={20} />
+                </button>
+                <button
+                    onClick={() => sliderRef.current?.slickNext()}
+                    className="absolute right-0 top-1/3 -translate-y-1/2 bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md hover:bg-secondary transition"
+                >
+                    <FaChevronRight size={20} />
+                </button>
             </div>
         </section>
     );

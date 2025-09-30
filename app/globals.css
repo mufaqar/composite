@@ -38,6 +38,9 @@ h1, h2, h3, h4, h5, h6 {
 .primary_btn {
   @apply md:text-lg text-sm font-bold text-white inline-flex w-fit md:px-7 md:py-[18px] px-5 py-2.5 bg-secondary rounded-4xl hover:bg-primary hover:text-white transition-all duration-300 ease-in-out;
 }
+button{
+  @apply cursor-pointer;
+}
 @media (min-width: 96rem) {
   /* 1536px */
   .container {
