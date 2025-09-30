@@ -71,7 +71,7 @@ function ContactForm() {
 
           {/* Message */}
           <textarea
-            rows="5"
+           
             placeholder="Message"
             className="w-full px-4 py-3 border border-gray-300 rounded-md  bg-white focus:outline-none focus:ring-2 focus:ring-teal-500 md:col-span-2"
           ></textarea>
