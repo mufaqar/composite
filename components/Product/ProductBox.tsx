@@ -40,7 +40,7 @@ const ProductBox = ({ data }: any) => {
                 <Link href="#" className="text-lg font-bold mt-2 text-black">
                     {data.title}
                 </Link>
-                <p className="text-description text-md">{data.description}</p>
+                <p className="md:text-base text-sm font-normal text-description font-Satoshi">{data.description}</p>
             </div>
             <div className="mt-4">
                 {/* Icons row */}

@@ -23,7 +23,7 @@ const faqs = [
   },
 ];
 
-const FaqsSection = () => {
+const FaqsSection = ({ title }: any) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleFaq = (index: number) => {
@@ -33,10 +33,10 @@ const FaqsSection = () => {
   return (
     <section className="md:py-20 py-16 bg-background">
       {/* Heading + Read More */}
-      <HeadingSection title="Frequently Asked Questions" desc="" />
-      <div className="max-w-[804px] mx-auto px-4">
+      <HeadingSection title={title} desc="" />
+      <div className="max-w-[804px] mx-auto px-4 mt-10">
         {faqs.map((faq, idx) => (
-          <div key={idx} className="md:py-8 md:px-5 py-4 max-w-[1024px] mx-auto border-b border-[#E7EAEE]">
+          <div key={idx} className={`${openIndex === idx ? "border" : "border-b"} md:py-8 md:px-5 py-4 max-w-[1024px] mx-auto border-[#E7EAEE]`}>
             {/* Question row */}
             <div
               className="flex justify-between items-center cursor-pointer transition-all duration-300"

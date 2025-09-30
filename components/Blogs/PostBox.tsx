@@ -4,7 +4,7 @@ import React from 'react'
 
 const PostBox = ({ data }: any) => {
     return (
-        <div className="bg-white">
+        <div className="">
             {/* Image */}
             <div className="relative w-full">
                 <Image

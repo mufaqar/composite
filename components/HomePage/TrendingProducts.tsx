@@ -38,7 +38,7 @@ const productsarr = [
         buttons: true,
     },
     {
-        id: 1,
+        id: 4,
         title: "Capped Composite Fencing Panel ",
         description: "A short description goes in here",
         price: "€299.99",
