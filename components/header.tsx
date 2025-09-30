@@ -12,7 +12,7 @@ type MenuItem = {
 };
 
 const menuItems: MenuItem[] = [
-  { label: "Decking", href: "/decking" },
+  { label: "Decking", href: "/category/decking" },
   { label: "Fencing", href: "/fencing" },
   { label: "Cladding", href: "/cladding" },
   { label: "Free Samples", href: "/free-samples" },
