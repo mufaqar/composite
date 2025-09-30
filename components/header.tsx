@@ -18,7 +18,7 @@ const menuItems: MenuItem[] = [
   { label: "Free Samples", href: "/free-samples" },
   { label: "Customer Reviews", href: "/customer-reviews" },
   { label: "Advice Centre", href: "/advice-centre" },
-  { label: "Contact Us", href: "/contact-us" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 const Header = () => {

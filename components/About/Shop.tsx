@@ -97,7 +97,7 @@ const Shop = () => {
           <Link href="#" className='primary_btn'>
            Request a Free Sample
           </Link>
-          <Link href="#" className='secondary_btn !bg-black !text-white '>
+          <Link href="/contact" className='secondary_btn !bg-black !text-white '>
             contact us
           </Link>
         </div>

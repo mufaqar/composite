@@ -1,12 +1,14 @@
 "use client";
 import React from "react";
-import { MapPin, Phone, Mail } from "lucide-react"; // icons
+
 import Image from "next/image";
+import { FaEnvelope, FaMapPin } from "react-icons/fa6";
+import { FaPhone } from "react-icons/fa";
 
 const contacts = [
   {
     id: 1,
-    icon: <MapPin className="w-6 h-6" />,
+    icon: <FaMapPin className="w-6 h-6" />,
     title: "Composite Warehouse",
     description: (
       <>
@@ -18,13 +20,13 @@ const contacts = [
   },
   {
     id: 2,
-    icon: <Phone className="w-6 h-6" />,
+    icon: <FaPhone className="w-6 h-6" />,
     title: "Phone",
     description: "01925 407884",
   },
   {
     id: 3,
-    icon: <Mail className="w-6 h-6" />,
+    icon: <FaEnvelope className="w-6 h-6" />,
     title: "Email",
     description: "support@compositewarehouse.co.uk",
   },
