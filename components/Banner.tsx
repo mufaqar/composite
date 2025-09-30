@@ -6,7 +6,7 @@ const Banner = ({ title, img, desc }: any) => {
         <section className='bg-[#003D2C] relative'>
             <div className='flex md:flex-row flex-col gap-8 items-center'>
                 <div className='md:w-1/2 w-full'>
-                    <Image src="/images/blog.png" alt='blog' width={720} height={426} className='w-full h-full' />
+                    <Image src={img} alt='blog' width={720} height={426} className='w-full h-full' />
                 </div>
                 <div className='md:w-1/2 w-full md:px-16 px-4 py-16'>
                     <h1 className='md:text-7xl text-[38px] leading-none font-medium text-white font-DM_Sans capitalize'>
