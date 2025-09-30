@@ -127,7 +127,7 @@ const Testimonials = () => {
           </button>
         </div>
       </div>
-      <Image src="/images/boxes2.png" alt='boxes2' width={232} height={155} className='md:w-[232px] md:h-[155px] w-[87.5px] h-[58.33] ml-auto mr-0 md:mt-16 mt-8' />
+      <Image src="/images/boxes2.png" alt='boxes2' width={232} height={155} className='md:w-[232px] md:h-[155px] w-[87.5px] h-[58.33] ml-auto mr-0 ' />
     </section>
   );
 };
