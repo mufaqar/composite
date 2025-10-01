@@ -124,7 +124,7 @@ const categories: Category[] = [
     },
 ]
 
-export default function ProductPage({ params }: { params: { slug: string } }) {
+export default function CategoryPage({ params }: { params: { slug: string } }) {
     const category = categories.find((c) => c.slug === params.slug)
 
     if (!category) return notFound()
@@ -149,7 +149,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                     categoryDescription={category.description}
                 />
             </section>
-            <Testimonials />
+            <Testimonials title="Lorem ipsum dolor sit amet." />
             <CompositPanel />
             <Compare />
             <div className="relative ">

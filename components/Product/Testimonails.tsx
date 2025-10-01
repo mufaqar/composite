@@ -50,7 +50,7 @@ const testimonials = [
 ];
 
 
-const Testimonials = () => {
+const Testimonials = ({ title }: any) => {
   const sliderRef = useRef<any>(null);
   const settings = {
     dots: false,
@@ -77,9 +77,9 @@ const Testimonials = () => {
     <section className="py-20 relative">
 
       {/* Header */}
-      <div className="container mx-auto px-4 md:mb-16 mb-12">
+      <div className="max-w-[848px] mx-auto px-4 md:mb-16 mb-12">
         <h2 className="md:text-6xl text-[34px] leading-none font-semibold text-title text-center font-DM_Sans">
-          Lorem ipsum dolor sit amet.
+          {title}
         </h2>
       </div>
       <div className="container mx-auto px-4">
@@ -87,7 +87,7 @@ const Testimonials = () => {
         <Slider ref={sliderRef} {...settings}>
           {testimonials.map((t) => (
             <div key={t.id} className="px-4">
-              <div className="border border-[#E5E5E5] rounded-[10px] p-6 h-full flex flex-col justify-between hover:border-transparent transition-all ease-in-out duration-300">
+              <div className="border border-[#E5E5E5] bg-white rounded-[10px] p-6 h-full flex flex-col justify-between hover:border-transparent transition-all ease-in-out duration-300">
                 <div className="flex text-[#FAAE4B]">
                   {Array.from({ length: t.rating }).map((_, i) => (
                     <FaStar key={i} />

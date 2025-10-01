@@ -37,7 +37,7 @@ const ProductBox = ({ data }: any) => {
                 </div>
 
                 {/* Title */}
-                <Link href="#" className="text-lg font-bold mt-2 text-black">
+                <Link href="/products/single" className="text-lg font-bold mt-2 text-black">
                     {data.title}
                 </Link>
                 <p className="md:text-base text-sm font-normal text-description font-Satoshi">{data.description}</p>
