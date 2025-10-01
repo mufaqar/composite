@@ -124,6 +124,7 @@ const categories: Category[] = [
     },
 ]
 
+
 export default async function ProductPage({
   params,
 }: {
@@ -131,7 +132,6 @@ export default async function ProductPage({
 }) {
   // params is available directly (no need for await in Next.js 14/15 stable)
   const { slug } = params;
-
   const category = categories.find((c) => c.slug === slug);
 
 
@@ -160,7 +160,7 @@ export default async function ProductPage({
                     categoryDescription={category.description}
                 />
             </section>
-            <Testimonials />
+            <Testimonials title="Lorem ipsum dolor sit amet." />
             <CompositPanel />
             <Compare />
             <div className="relative ">

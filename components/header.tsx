@@ -27,7 +27,7 @@ const Header = () => {
   const pathname = usePathname()
 
   return (
-    <header className="py-3.5 relative z-50">
+    <header className={`${pathname === "/" ? "border-transparent " : "border-[#D2D2D2]"} border-b py-3.5 relative z-50`}>
       <div className="container mx-auto px-4 flex flex-row gap-5 items-center justify-between">
         {/* Logo */}
         <div>

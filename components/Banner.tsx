@@ -4,7 +4,7 @@ import React from 'react'
 const Banner = ({ title, img, desc }: any) => {
     return (
         <section className='bg-[#003D2C] relative'>
-            <div className='flex md:flex-row flex-col gap-8 items-center'>
+            <div className='flex md:flex-row flex-col gap-8 items-stretch'>
                 <div className='md:w-1/2 w-full'>
                     <Image src={img} alt='blog' width={720} height={426} className='w-full h-full' />
                 </div>
