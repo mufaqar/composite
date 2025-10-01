@@ -1,6 +1,7 @@
 "use client";
 import Image from 'next/image';
 import React, { useState } from 'react';
+import AnimateOnScroll, { useAutoDelay } from '../Animation';
 
 const faqs = [
     {
@@ -21,6 +22,7 @@ const faqs = [
 ];
 
 const Advanteges = () => {
+    const getDelay = useAutoDelay();
     const [activeIndex, setActiveIndex] = useState(0);
 
     return (
@@ -36,42 +38,46 @@ const Advanteges = () => {
             <div className="flex md:flex-row flex-col gap-6 mt-10">
                 {/* Left Side */}
                 <div className="2xl:w-[45%] md:w-[55%] w-full md:px-0 px-4 md:pb-16 pb-8">
-                    <h4 className="text-lg font-bold text-primary font-DM_Sans md:block hidden mb-4">
-                        Why We're Different:
-                    </h4>
-                    <h2 className="md:text-6xl text-[34px] leading-none font-semibold text-title font-DM_Sans">
-                        The Composite Warehouse Advantage
-                    </h2>
-
+                    <AnimateOnScroll type="fade-up" delay={getDelay()}>
+                        <h4 className="text-lg font-bold text-primary font-DM_Sans md:block hidden mb-4">
+                            Why We're Different:
+                        </h4>
+                    </AnimateOnScroll>
+                    <AnimateOnScroll type="fade-up" delay={getDelay()}>
+                        <h2 className="md:text-6xl text-[34px] leading-none font-semibold text-title font-DM_Sans">
+                            The Composite Warehouse Advantage
+                        </h2>
+                    </AnimateOnScroll>
                     <div className="mt-6 divide-y divide-[#D6D6D6]">
                         {faqs.map((item, index) => (
-                            <div key={index}
-                                className="flex items-start gap-2 py-3 cursor-pointer"
-                                onClick={() =>
-                                    setActiveIndex(activeIndex === index ? -1 : index)
-                                }
-                            >
-                                <div className="relative w-[22px] md:w-[48px]">
-                                    <Image
-                                        src="/images/shield.png"
-                                        alt="shield"
-                                        width={48}
-                                        height={48}
-                                        className="min-w-[22px] min-h-[22px] md:min-w-[48px] md:min-h-[48px]"
-                                    />
-                                    <span className="absolute md:w-10 md:h-10 w-[22px] h-[22px] bg-primary/20 rounded-full -bottom-2"></span>
+                            <AnimateOnScroll key={index} type="fade-up" delay={getDelay()}>
+                                <div className="flex items-start gap-2 py-3 cursor-pointer"
+                                    onClick={() =>
+                                        setActiveIndex(activeIndex === index ? -1 : index)
+                                    }
+                                >
+                                    <div className="relative w-[22px] md:w-[48px]">
+                                        <Image
+                                            src="/images/shield.png"
+                                            alt="shield"
+                                            width={48}
+                                            height={48}
+                                            className="min-w-[22px] min-h-[22px] md:min-w-[48px] md:min-h-[48px]"
+                                        />
+                                        <span className="absolute md:w-10 md:h-10 w-[22px] h-[22px] bg-primary/20 rounded-full -bottom-2"></span>
+                                    </div>
+                                    <div>
+                                        <h3 className="md:text-[28px] text-lg font-semibold text-title font-DM_Sans">
+                                            {item.title}
+                                        </h3>
+                                        {activeIndex === index && (
+                                            <p className="md:text-xl text-sm font-normal text-description mt-3">
+                                                {item.description}
+                                            </p>
+                                        )}
+                                    </div>
                                 </div>
-                                <div>
-                                    <h3 className="md:text-[28px] text-lg font-semibold text-title font-DM_Sans">
-                                        {item.title}
-                                    </h3>
-                                    {activeIndex === index && (
-                                        <p className="md:text-xl text-sm font-normal text-description mt-3">
-                                            {item.description}
-                                        </p>
-                                    )}
-                                </div>
-                            </div>
+                            </AnimateOnScroll>
                         ))}
                     </div>
                 </div>

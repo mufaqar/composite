@@ -5,6 +5,7 @@ import HeadingSection from "../HeadingSection";
 import ProductBox from "../Product/ProductBox";
 import Slider from "react-slick";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+import AnimateOnScroll, { useAutoDelay } from "../Animation";
 
 const productsarr = [
     {
@@ -50,6 +51,7 @@ const productsarr = [
 ];
 
 export default function TrendingProducts() {
+    const getDelay = useAutoDelay();
     const sliderRef = useRef<any>(null);
 
     const settings = {
@@ -78,13 +80,15 @@ export default function TrendingProducts() {
                 readMore />
 
             <div className="container mx-auto px-4 mt-12 relative">
-                <Slider ref={sliderRef} {...settings}>
-                    {productsarr.map((product) => (
-                        <div key={product.id} className="px-2">
-                            <ProductBox data={product} />
-                        </div>
-                    ))}
-                </Slider>
+                <AnimateOnScroll type="fade-up" delay={getDelay()}>
+                    <Slider ref={sliderRef} {...settings}>
+                        {productsarr.map((product) => (
+                            <div key={product.id} className="px-2">
+                                <ProductBox data={product} />
+                            </div>
+                        ))}
+                    </Slider>
+                </AnimateOnScroll>
                 {/* Custom Arrows */}
                 <button
                     onClick={() => sliderRef.current?.slickPrev()}

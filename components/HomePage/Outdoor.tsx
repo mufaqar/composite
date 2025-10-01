@@ -5,8 +5,10 @@ import React from "react";
 import OutDoorSlider from "./OutdoorSlider";
 import Link from "next/link";
 import HeadingSection from "../HeadingSection";
+import AnimateOnScroll, { useAutoDelay } from "../Animation";
 
 const Outdoor = () => {
+  const getDelay = useAutoDelay();
   return (
     <section className="py-16 bg-[#F0FAF7] relative ">
       <Image
@@ -21,12 +23,16 @@ const Outdoor = () => {
           versatile composite materials. Browse our gallery for inspiration and
           discover how Composite Warehouse can help you bring your vision to
           life." />
-      <OutDoorSlider />
-      <div className='w-fit mx-auto flex md:flex-row flex-col gap-5 mt-5'>
-        <Link href="#" className='primary_btn'>
-          View Our Project Gallery
-        </Link>
-      </div>
+      <AnimateOnScroll type="fade-up" delay={getDelay()}>
+        <OutDoorSlider />
+      </AnimateOnScroll>
+      <AnimateOnScroll type="fade-up" delay={getDelay()}>
+        <div className='w-fit mx-auto flex md:flex-row flex-col gap-5 mt-5'>
+          <Link href="#" className='primary_btn'>
+            View Our Project Gallery
+          </Link>
+        </div>
+      </AnimateOnScroll>
     </section>
   );
 };

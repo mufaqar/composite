@@ -2,9 +2,11 @@
 import Link from 'next/link';
 import React, { useState } from 'react'
 import HeadingSection from '../HeadingSection';
+import AnimateOnScroll, { useAutoDelay } from '../Animation';
 
 const ProductRange = () => {
     const [active, setActive] = useState<number | null>(0);
+    const getDelay = useAutoDelay();
 
     const products = [
         {
@@ -31,6 +33,7 @@ const ProductRange = () => {
         <section className="pt-24">
             {/* Heading + Read More */}
             <HeadingSection title="Explore Our Composite Product Range" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua" readMore />
+            <AnimateOnScroll type="fade-up" delay={getDelay()}>
             <div className='flex md:flex-row flex-col w-full mt-12'>
                 {products.map((product) => (
                     <div
@@ -66,7 +69,8 @@ const ProductRange = () => {
                     </div>
                 ))}
             </div>
-        </section >
+            </AnimateOnScroll>
+        </section>
     )
 }
 
