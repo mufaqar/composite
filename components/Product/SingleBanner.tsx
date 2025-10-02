@@ -1,9 +1,14 @@
+'use client';
 import React from 'react'
 import ProductGallery from './ProductGallery'
 import BreadCrumb from './BreadCrumb'
 import FenceConfigurator from './FenceConfigurator'
+import CalculateArea from './CalculateArea'
+import { usePathname } from 'next/navigation'
 
 const SingleBanner = () => {
+    const pathname = usePathname()
+
     return (
         <section className='pt-16 pb-20'>
             <div className='container mx-auto px-4'>
@@ -20,7 +25,7 @@ const SingleBanner = () => {
                         </h1>
                         <div className="flex items-center gap-1 text-yellow-500 text-lg mt-5">
                             {"★".repeat(5)}
-                            <span className="md:text-lg text-sm font-bold text-title ml-1 ">371 Reviews</span>
+                            <span className="md:text-lg text-sm font-bold text-title ml-1 ">371 Reviews</span>
                         </div>
                         <h4 className='md:text-5xl text-[28px] font-bold text-secondary font-DM_Sans my-8'>
                             €129.99
@@ -29,6 +34,7 @@ const SingleBanner = () => {
                             Availability: <span className='text-primary'>In Stock</span>
                         </p>
                     </div>
+                    {pathname === "/products/single" &&
                     <div className='py-3.5 bg-background md:block hidden'>
                         <h3 className='md:text-3xl text-xl font-medium text-title text-center font-DM_Sans capitalize'>
                             fence configurator
@@ -36,10 +42,12 @@ const SingleBanner = () => {
                         <p className='md:text-lg text-sm font-normal text-description text-center font-Satoshi'>
                             use specs below
                         </p>
-                    </div>
+                    </div>}
                 </div>
             </div>
-                <FenceConfigurator />
+
+            {pathname === "/demo-pro" && <CalculateArea />}
+            {pathname === "/products/single" && <FenceConfigurator />}
         </section>
     )
 }
