@@ -14,11 +14,11 @@ type MenuItem = {
 
 const menuItems: MenuItem[] = [
   { label: "Decking", href: "/category/decking" },
-  { label: "Fencing", href: "/fencing" },
-  { label: "Cladding", href: "/cladding" },
+  { label: "Fencing", href: "/category/fencing" },
+  { label: "Cladding", href: "/category/cladding" },
   { label: "Free Samples", href: "/free-samples" },
-  { label: "Customer Reviews", href: "/customer-reviews" },
-  { label: "Advice Centre", href: "/advice-centre" },
+  { label: "Customer Reviews", href: "#" },
+  { label: "Advice Centre", href: "#" },
   { label: "Contact Us", href: "/contact" },
 ];
 

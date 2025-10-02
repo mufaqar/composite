@@ -34,11 +34,194 @@ interface Category {
 const categories: Category[] = [
     {
         id: 1,
-        slug: "ducking",
+        slug: "decking",
         title: "Composite Fencing Panels",
         description:
             "Composite fencing is quickly becoming one of the most widely used fencing materials in the UK today. Homeowners now understand the benefits of its low maintenance attributes. It is not only modern and attractive but also durable",
         image: "/images/fencing.png",
+        
+        products: [
+            {
+                id: 1,
+                title: "Capped Composite Fencing Panel ",
+                description: "A short description goes in here",
+                price: "€299.99",
+                discountPrice: "€249.99",
+                rating: 4.5,
+                image: "/images/Products-1.png", // replace with real image path
+                buttons: true,
+            },
+            {
+                id: 2,
+                title: "Capped Composite Fencing Panel",
+                description: "A short description goes in here",
+                price: "€299.99",
+                discountPrice: "€249.99",
+                rating: 4.5,
+                image: "/images/Products-2.png",
+                buttons: true,
+            },
+            {
+                id: 3,
+                title: "Composite Fencing Panel For Concrete Post",
+                description: "A short description goes in here",
+                price: "€299.99",
+                discountPrice: "€249.99",
+                rating: 4.5,
+                image: "/images/Products-3.png",
+                buttons: true,
+            },
+            {
+                id: 4,
+                title: "Capped Composite Fencing Panel ",
+                description: "A short description goes in here",
+                price: "€299.99",
+                discountPrice: "€249.99",
+                rating: 4.5,
+                image: "/images/Products-1.png", // replace with real image path
+                buttons: true,
+            },
+            {
+                id: 5,
+                title: "Capped Composite Fencing Panel ",
+                description: "A short description goes in here",
+                price: "€299.99",
+                discountPrice: "€249.99",
+                rating: 4.5,
+                image: "/images/Products-1.png", // replace with real image path
+                buttons: true,
+            },
+            {
+                id: 6,
+                title: "Capped Composite Fencing Panel",
+                description: "A short description goes in here",
+                price: "€299.99",
+                discountPrice: "€249.99",
+                rating: 4.5,
+                image: "/images/Products-2.png",
+                buttons: true,
+            },
+            {
+                id: 7,
+                title: "Composite Fencing Panel For Concrete Post",
+                description: "A short description goes in here",
+                price: "€299.99",
+                discountPrice: "€249.99",
+                rating: 4.5,
+                image: "/images/Products-3.png",
+                buttons: true,
+            },
+            {
+                id: 8,
+                title: "Capped Composite Fencing Panel ",
+                description: "A short description goes in here",
+                price: "€299.99",
+                discountPrice: "€249.99",
+                rating: 4.5,
+                image: "/images/Products-1.png", // replace with real image path
+                buttons: true,
+            },
+        ],
+    },
+    {
+        id: 2,
+        slug: "fencing",
+        title: "Fencing Panels",
+        description:
+            "Composite fencing is quickly becoming one of the most widely used fencing materials in the UK today. Homeowners now understand the benefits of its low maintenance attributes. It is not only modern and attractive but also durable",
+        image: "/images/fencing.png",
+        
+        products: [
+            {
+                id: 1,
+                title: "Capped Composite Fencing Panel ",
+                description: "A short description goes in here",
+                price: "€299.99",
+                discountPrice: "€249.99",
+                rating: 4.5,
+                image: "/images/Products-1.png", // replace with real image path
+                buttons: true,
+            },
+            {
+                id: 2,
+                title: "Capped Composite Fencing Panel",
+                description: "A short description goes in here",
+                price: "€299.99",
+                discountPrice: "€249.99",
+                rating: 4.5,
+                image: "/images/Products-2.png",
+                buttons: true,
+            },
+            {
+                id: 3,
+                title: "Composite Fencing Panel For Concrete Post",
+                description: "A short description goes in here",
+                price: "€299.99",
+                discountPrice: "€249.99",
+                rating: 4.5,
+                image: "/images/Products-3.png",
+                buttons: true,
+            },
+            {
+                id: 4,
+                title: "Capped Composite Fencing Panel ",
+                description: "A short description goes in here",
+                price: "€299.99",
+                discountPrice: "€249.99",
+                rating: 4.5,
+                image: "/images/Products-1.png", // replace with real image path
+                buttons: true,
+            },
+            {
+                id: 5,
+                title: "Capped Composite Fencing Panel ",
+                description: "A short description goes in here",
+                price: "€299.99",
+                discountPrice: "€249.99",
+                rating: 4.5,
+                image: "/images/Products-1.png", // replace with real image path
+                buttons: true,
+            },
+            {
+                id: 6,
+                title: "Capped Composite Fencing Panel",
+                description: "A short description goes in here",
+                price: "€299.99",
+                discountPrice: "€249.99",
+                rating: 4.5,
+                image: "/images/Products-2.png",
+                buttons: true,
+            },
+            {
+                id: 7,
+                title: "Composite Fencing Panel For Concrete Post",
+                description: "A short description goes in here",
+                price: "€299.99",
+                discountPrice: "€249.99",
+                rating: 4.5,
+                image: "/images/Products-3.png",
+                buttons: true,
+            },
+            {
+                id: 8,
+                title: "Capped Composite Fencing Panel ",
+                description: "A short description goes in here",
+                price: "€299.99",
+                discountPrice: "€249.99",
+                rating: 4.5,
+                image: "/images/Products-1.png", // replace with real image path
+                buttons: true,
+            },
+        ],
+    },
+    {
+        id: 3,
+        slug: "cladding",
+        title: "cladding Panels",
+        description:
+            "Composite fencing is quickly becoming one of the most widely used fencing materials in the UK today. Homeowners now understand the benefits of its low maintenance attributes. It is not only modern and attractive but also durable",
+        image: "/images/fencing.png",
+        
         products: [
             {
                 id: 1,
