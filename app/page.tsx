@@ -3,8 +3,6 @@ import FaqsSection from "@/components/FaqSection";
 import Advanteges from "@/components/HomePage/Advanteges";
 import ClientLogos from "@/components/HomePage/ClientLogos";
 import CustomerInnovate from "@/components/HomePage/CustomerInovate";
-
-
 import FeaturedIcons from "@/components/HomePage/FeaturedIcons";
 import Hero from "@/components/HomePage/Hero";
 import Outdoor from "@/components/HomePage/Outdoor";
@@ -29,7 +27,6 @@ export default function Home() {
       <Testimonials />
       <FaqsSection title="Frequently Asked Questions" />
       <BlogsSection />
-
     </main>
   );
 }

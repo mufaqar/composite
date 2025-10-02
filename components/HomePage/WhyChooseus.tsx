@@ -4,6 +4,7 @@ import React, { useRef } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Slider from "react-slick";
 import HeadingSection from "../HeadingSection";
+import AnimateOnScroll, { useAutoDelay } from "../Animation";
 
 const WhyUS = [
     {
@@ -37,6 +38,7 @@ const WhyUS = [
 ];
 
 const WhyChooseus = () => {
+    const getDelay = useAutoDelay();
     const sliderRef = useRef<any>(null);
 
     const settings = {
@@ -62,35 +64,38 @@ const WhyChooseus = () => {
         <section className="pt-24 pb-12">
             {/* Heading + Read More */}
             <HeadingSection title="Why Choose Composite Warehouse?" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-            readMore />
+                readMore />
 
             {/* Slider Section */}
             <div className="container mx-auto px-4 mt-12 relative">
-                <Slider ref={sliderRef} {...settings}>
-                    {WhyUS.map((item) => (
-                        <div key={item.id} className="px-2">
-                            <div className="border border-[#E4E4E4] bg-background/35 px-11 py-9 h-[353px]">
-                                <div className="relative w-fit">
-                                    <Image
-                                        src={item.icon}
-                                        alt={item.title}
-                                        width={72}
-                                        height={72}
-                                        className="w-[32px] h-[32px] md:w-[72px] md:h-[72px]"
-                                    />
-                                    <span className="absolute md:w-10 md:h-10 w-[22px] h-[22px] bg-primary/20 rounded-full -bottom-2"></span>
-                                </div>
-                                <h3 className="md:text-[28px] text-lg font-semibold text-title font-DM_Sans mt-4">
-                                    {item.title}
-                                </h3>
-                                <p className="md:text-xl text-sm font-normal text-description mt-5">
-                                    {item.description}
-                                </p>
-                            </div>
-                        </div>
-                    ))}
-                </Slider>
+                <AnimateOnScroll type="fade-up" delay={getDelay()}>
+                    <Slider ref={sliderRef} {...settings}>
+                        {WhyUS.map((item) => (
 
+                            <div key={item.id} className="px-2">
+                                <div className="border border-[#E4E4E4] bg-background/35 px-11 py-9 h-[353px]">
+                                    <div className="relative w-fit">
+                                        <Image
+                                            src={item.icon}
+                                            alt={item.title}
+                                            width={72}
+                                            height={72}
+                                            className="w-[32px] h-[32px] md:w-[72px] md:h-[72px]"
+                                        />
+                                        <span className="absolute md:w-10 md:h-10 w-[22px] h-[22px] bg-primary/20 rounded-full -bottom-2"></span>
+                                    </div>
+                                    <h3 className="md:text-[28px] text-lg font-semibold text-title font-DM_Sans mt-4">
+                                        {item.title}
+                                    </h3>
+                                    <p className="md:text-xl text-sm font-normal text-description mt-5">
+                                        {item.description}
+                                    </p>
+                                </div>
+                            </div>
+
+                        ))}
+                    </Slider>
+                </AnimateOnScroll>
                 {/* Custom Arrows */}
                 <button
                     onClick={() => sliderRef.current?.slickPrev()}

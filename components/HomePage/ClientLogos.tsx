@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import AnimateOnScroll, { useAutoDelay } from "../Animation";
 const logos = [
   { id: 1, src: "/images/logo-1.png", alt: "Logo 1" },
   { id: 2, src: "/images/logo-2.png", alt: "Logo 2" },
@@ -9,14 +10,14 @@ const logos = [
   { id: 5, src: "/images/logo-1.png", alt: "Logo 5" },
 ];
 export default function ClientLogos() {
+  const getDelay = useAutoDelay();
   return (
     <section className="py-10 bg-[#F6F6F6]">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 items-center gap-6">
           {logos.map((logo) => (
-            <div
-              key={logo.id}
-              className="flex justify-center grayscale hover:grayscale-0 transition"
+            <AnimateOnScroll key={logo.id} type="fade-up" delay={getDelay()}>
+            <div className="flex justify-center grayscale hover:grayscale-0 transition"
             >
               <Image
                 src={logo.src}
@@ -26,6 +27,7 @@ export default function ClientLogos() {
                 className="h-auto w-auto object-contain"
               />
             </div>
+            </AnimateOnScroll>
           ))}
         </div>
       </div>
